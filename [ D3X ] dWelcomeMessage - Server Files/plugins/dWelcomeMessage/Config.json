@@ -1,0 +1,19 @@
+{
+  "Settings": {
+    "Prefix": "[{DARKRED}Połączenie{DEFAULT}]",
+    "Default_Welcome_Message": "{GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wbija na serwer!",
+    "Default_Goodbye_Message": "{GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wyszedł z serwer!"
+  },
+  "Groups": {
+    "VIP": {
+      "PermissionRequired": "@css/vip",
+      "Welcome_Message": "{YELLOW}★VIP★ {GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wyszedł z serwer!",
+      "Goodbye_Message": "{YELLOW}★VIP★ {GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wyszedł z serwer!"
+    },
+    "SVIP": {
+      "PermissionRequired": "@css/svip",
+      "Welcome_Message": "{YELLOW}★SVIP★ {GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wbija na serwer!",
+      "Goodbye_Message": "{YELLOW}★SVIP★ {GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wyszedł z serwer!"
+    }
+  }
+}
