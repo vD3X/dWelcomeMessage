@@ -37,9 +37,13 @@ public class dWelcomeMessage : BasePlugin
         var group = GetPlayerGroup(player);
         var welcomeMessage = GetMessageForGroup(group, "Welcome_Message");
 
+        if (!Config.config.Settings.Default_Message_Enabled && group == "Default") return;
+
         var formattedMessage = FormatMessage(welcomeMessage, playerName, steamid);
-        Server.PrintToChatAll(formattedMessage);
-        Instance.Logger.LogInformation($"{formattedMessage}");
+        if (!string.IsNullOrEmpty(formattedMessage))
+        {
+            Server.PrintToChatAll(formattedMessage);
+        }
     }
 
     private HookResult OnPlayerDisconnect(EventPlayerDisconnect @event, GameEventInfo info)
@@ -52,9 +56,13 @@ public class dWelcomeMessage : BasePlugin
         var group = GetPlayerGroup(player);
         var goodbyeMessage = GetMessageForGroup(group, "Goodbye_Message");
 
+        if (!Config.config.Settings.Default_Message_Enabled && group == "Default") return HookResult.Continue;
+
         var formattedMessage = FormatMessage(goodbyeMessage, playerName, steamid);
-        Server.PrintToChatAll(formattedMessage);
-        Instance.Logger.LogInformation($" {formattedMessage}");
+        if (!string.IsNullOrEmpty(formattedMessage))
+        {
+            Server.PrintToChatAll(formattedMessage);
+        }
 
         return HookResult.Continue;
     }

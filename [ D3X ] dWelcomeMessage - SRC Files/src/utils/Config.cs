@@ -116,6 +116,7 @@ namespace dWelcomeMessage
         public class Settings
         {
             public string Prefix { get; set; } = "[{DARKRED}Połączenie{DEFAULT}]";
+            public bool Default_Message_Enabled { get; set; } = true;
             public string Default_Welcome_Message { get; set; } = "{GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wbija na serwer!";
             public string Default_Goodbye_Message { get; set; } = "{GREEN}{PLAYERNAME} {DEFAULT}({LIME}{STEAMID}{DEFAULT}) wyszedł z serwer!";
         }
